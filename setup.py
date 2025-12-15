@@ -1,0 +1,35 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="physician-notetaker",
+    version="1.0.0",
+    description="End-to-end NLP pipeline for medical transcription: NER, summarization, sentiment, and SOAP notes",
+    author="Your Name",
+    author_email="your.email@example.com",
+    packages=find_packages(),
+    install_requires=[
+        "spacy>=3.7.0",
+        "scispacy>=0.5.3",
+        "transformers>=4.35.0",
+        "torch>=2.0.0",
+        "sentence-transformers>=2.2.0",
+        "pandas>=2.0.0",
+        "numpy>=1.24.0",
+        "scikit-learn>=1.3.0",
+        "dateparser>=1.1.0",
+        "yake>=0.4.8",
+        "rake-nltk>=1.0.6",
+        "fastapi>=0.104.0",
+        "uvicorn[standard]>=0.24.0",
+        "pydantic>=2.0.0",
+        "python-multipart>=0.0.6",
+        "tqdm>=4.66.0",
+    ],
+    python_requires=">=3.9",
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Healthcare Industry",
+        "Topic :: Scientific/Engineering :: Medical Science Apps.",
+        "Programming Language :: Python :: 3.9",
+    ],
+)

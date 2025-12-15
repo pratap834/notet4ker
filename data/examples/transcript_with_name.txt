@@ -1,0 +1,37 @@
+Doctor: Good afternoon. Please have a seat. Can I start by confirming your name?
+
+Patient: Yes, it's Janet Jones.
+
+Doctor: Thank you, Ms. Jones. So, you're here about your car accident, is that right?
+
+Patient: Yes, Doctor. I was in a car accident on September 1st, and I'm still having some issues.
+
+Doctor: I see. Can you tell me what happened?
+
+Patient: Well, I was driving when someone rear-ended me at a traffic light. My head jerked back quite hard.
+
+Doctor: And what symptoms have you been experiencing?
+
+Patient: Right after the accident, I had a bad headache and my neck was really stiff. The neck pain was the worst part—it lasted for about four weeks. I also had some back pain that came and went.
+
+Doctor: Did you seek treatment immediately?
+
+Patient: Yes, I went to the hospital emergency room the same day. They said I had whiplash and gave me some painkillers.
+
+Doctor: How has your recovery been?
+
+Patient: The first month was rough. The pain was pretty severe. But then I started physiotherapy—I've had about 10 sessions so far—and that's helped a lot. The neck pain is mostly gone now, though I still get the occasional backache.
+
+Doctor: Let me examine you. Can you turn your head to the left... and to the right... Good. Any pain?
+
+Patient: No, not really. Maybe a tiny bit of stiffness, but nothing like before.
+
+Doctor: Excellent. Your range of motion looks good. Based on what you've told me and the examination, I'd say you're recovering well from the whiplash injury.
+
+Patient: So, do you think I'll make a full recovery?
+
+Doctor: Yes, I'm optimistic. Most people with whiplash recover completely within six months, and you're already showing significant improvement.
+
+Patient: That's reassuring. Thank you, Doctor.
+
+Doctor: You're welcome. If your symptoms worsen, come back and see me. Otherwise, I think you're on the right track.

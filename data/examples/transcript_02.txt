@@ -1,0 +1,35 @@
+Doctor: Hello, how are you feeling today?
+
+Patient: Not great, doctor. I've been having chest pain.
+
+Doctor: When did this start?
+
+Patient: About three days ago.
+
+Doctor: On a scale of 1 to 10, how severe is the pain?
+
+Patient: I'd say about a 7. It's pretty bad.
+
+Doctor: Does anything make it better or worse?
+
+Patient: It gets worse when I take deep breaths.
+
+Doctor: Have you had any other symptoms? Shortness of breath, sweating, nausea?
+
+Patient: Yes, I've been a bit short of breath, and I was sweating a lot yesterday.
+
+Doctor: Okay, I'm going to examine you now. Let me listen to your heart and lungs.
+
+Patient: Okay.
+
+Doctor: Your heart sounds fine, but I can hear some crackling in your left lung. I'd like to order a chest X-ray and some blood tests to rule out any serious conditions. Based on your symptoms, it could be pneumonia or pleurisy.
+
+Patient: Is that serious?
+
+Doctor: It can be, but if we catch it early and start treatment, you should recover well. I'm going to prescribe antibiotics for now, and we'll adjust based on your test results.
+
+Patient: How long until I feel better?
+
+Doctor: Most patients start feeling improvement within 48 to 72 hours of starting antibiotics. You should rest, drink plenty of fluids, and avoid strenuous activity.
+
+Patient: Okay, thank you doctor.

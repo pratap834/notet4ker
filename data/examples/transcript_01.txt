@@ -1,0 +1,39 @@
+Doctor: Good afternoon. Please take a seat. So, you're here about your accident claim, is that right?
+
+Patient: Yes, Doctor. I was in a car accident back on September 1st, and I'm still having some issues.
+
+Doctor: I see. Can you tell me a bit about what happened?
+
+Patient: Well, I was driving from Cheadle Hulme to Manchester when someone rear-ended me at a traffic light. The impact wasn't huge, but my head jerked back quite hard.
+
+Doctor: And what symptoms have you been experiencing since then?
+
+Patient: Right after the accident, I had a bad headache and my neck was really stiff. The neck pain was the worst part—it lasted for about four weeks. I also had some back pain that came and went.
+
+Doctor: Did you seek treatment immediately after the accident?
+
+Patient: Yes, I went to the A&E at Moss Bank Hospital the same day. They checked me over and said I had whiplash. They gave me some painkillers and told me to rest.
+
+Doctor: And how has your recovery been since then?
+
+Patient: The first month was rough. The pain was pretty severe, and I had trouble sleeping. But then I started physiotherapy—I've had about 10 sessions so far—and that's helped a lot. The neck pain is mostly gone now, though I still get the occasional backache.
+
+Doctor: That's good to hear. Let me just do a quick examination. Can you turn your head to the left... and to the right... Good. Any pain with that?
+
+Patient: No, not really. Maybe a tiny bit of stiffness, but nothing like before.
+
+Doctor: Okay. And if I press here on your neck... anything?
+
+Patient: No, that's fine.
+
+Doctor: Excellent. Your range of motion looks good, and there's no tenderness. Based on what you've told me and the examination, I'd say you're recovering well from the whiplash injury. The occasional backache you're experiencing is common and should continue to improve.
+
+Patient: So, do you think I'll make a full recovery?
+
+Doctor: Yes, I'm optimistic. Most people with whiplash recover completely within six months, and you're already showing significant improvement. Just continue with the physiotherapy exercises at home, and you should be fine.
+
+Patient: That's reassuring. Thank you, Doctor.
+
+Doctor: You're welcome. If your symptoms worsen or don't improve within the next few months, come back and see me. Otherwise, I think you're on the right track.
+
+Patient: Will do. Thanks again.

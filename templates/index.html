@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physician Notetaker - Medical Transcript Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                </svg>
+                Physician Notetaker
+            </h1>
+            <p class="subtitle">AI-Powered Medical Transcript Analysis</p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Input Section -->
+            <section class="card input-section">
+                <h2>Medical Transcript</h2>
+                <textarea 
+                    id="transcript-input" 
+                    placeholder="Paste or type the medical conversation transcript here...
+
+Example:
+Doctor: Good morning, how are you feeling today?
+Patient: I've been experiencing severe headaches for the past week.
+Doctor: I see. Any other symptoms?
+Patient: Yes, I feel nauseous sometimes and bright lights make it worse.
+Doctor: Based on your symptoms, this could be migraines. I'm prescribing sumatriptan."
+                    rows="12"
+                ></textarea>
+                
+                <div class="button-group">
+                    <button id="analyze-btn" class="btn btn-primary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                        Analyze Transcript
+                    </button>
+                    <button id="clear-btn" class="btn btn-secondary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                        </svg>
+                        Clear
+                    </button>
+                    <button id="load-sample-btn" class="btn btn-secondary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        Load Sample
+                    </button>
+                </div>
+
+                <!-- Loading Indicator -->
+                <div id="loading" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Analyzing transcript with AI models... This may take a moment on first load.</p>
+                </div>
+
+                <!-- Error Message -->
+                <div id="error-message" class="error-message" style="display: none;"></div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results-section" class="results-section" style="display: none;">
+                <!-- Key Findings Header -->
+                <div class="section-header">
+                    <h2 class="section-title">📋 Analysis Results</h2>
+                    <p class="section-subtitle">Comprehensive medical transcript analysis with AI-powered insights</p>
+                </div>
+
+                <!-- Clinical Entities - Moved to top -->
+                <div class="card highlight-card">
+                    <div class="card-header">
+                        <h2>🔍 Clinical Entities Identified</h2>
+                    </div>
+                    <div class="entities-grid">
+                        <!-- Symptoms -->
+                        <div class="entity-card">
+                            <div class="entity-header">
+                                <span class="entity-icon">🩺</span>
+                                <h3>Symptoms</h3>
+                            </div>
+                            <ul id="symptoms-list" class="entity-list"></ul>
+                        </div>
+
+                        <!-- Diagnosis -->
+                        <div class="entity-card">
+                            <div class="entity-header">
+                                <span class="entity-icon">🏥</span>
+                                <h3>Diagnosis</h3>
+                            </div>
+                            <ul id="diagnosis-list" class="entity-list"></ul>
+                        </div>
+
+                        <!-- Treatment -->
+                        <div class="entity-card">
+                            <div class="entity-header">
+                                <span class="entity-icon">💊</span>
+                                <h3>Treatment</h3>
+                            </div>
+                            <ul id="treatment-list" class="entity-list"></ul>
+                        </div>
+
+                        <!-- Medications -->
+                        <div class="entity-card">
+                            <div class="entity-header">
+                                <span class="entity-icon">💉</span>
+                                <h3>Medications</h3>
+                            </div>
+                            <ul id="medications-list" class="entity-list"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOAP Note -->
+                <div class="card">
+                    <div class="card-header collapsible" onclick="toggleSection('soap-note')">
+                        <h2>📄 SOAP Note</h2>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div id="soap-note" class="soap-note collapsible-content"></div>
+                </div>
+
+                <!-- Clinical Summary -->
+                <div class="card">
+                    <div class="card-header collapsible" onclick="toggleSection('summary')">
+                        <h2>📝 Clinical Summary</h2>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div id="summary" class="summary collapsible-content"></div>
+                </div>
+
+                <!-- Analysis Metadata -->
+                <div class="card metadata-card">
+                    <div class="card-header collapsible" onclick="toggleSection('metadata')">
+                        <h2>⚙️ Analysis Details</h2>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div id="metadata" class="metadata collapsible-content"></div>
+                </div>
+
+                <!-- Actions Bar -->
+                <div class="actions-bar">
+                    <button id="export-btn" class="btn btn-primary">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                        Export Results (JSON)
+                    </button>
+                    <button id="new-analysis-btn" class="btn btn-secondary" onclick="document.getElementById('transcript-input').scrollIntoView({behavior: 'smooth'})">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 4v16m8-8H4"/>
+                        </svg>
+                        New Analysis
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-note">⚕️ For demonstration and research purposes only. Not intended for clinical use.</p>
+            <p class="footer-models">Powered by FLAN-T5, DistilBERT, and BERT NER</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+Doctor: What brings you in today?
+
+Patient: I twisted my ankle playing basketball last week.
+
+Doctor: Let's take a look. Can you describe how it happened?
+
+Patient: I came down wrong after going for a rebound. Felt a pop and immediate pain.
+
+Doctor: Has the swelling gone down at all?
+
+Patient: A little bit, but it's still pretty swollen.
+
+Doctor: Can you put weight on it?
+
+Patient: I can, but it hurts.
+
+Doctor: Let me check the range of motion. Point your toes... flex... rotate. Does this hurt?
+
+Patient: Yes, especially when I rotate it.
+
+Doctor: Based on the examination, I believe you have a Grade 2 ankle sprain. The ligaments are stretched and partially torn, but not completely ruptured.
+
+Patient: What's the treatment for that?
+
+Doctor: Rest, ice, compression, and elevation—RICE protocol. I'll also give you a ankle brace to wear for support. Avoid putting too much weight on it for at least a week.
+
+Patient: When can I play basketball again?
+
+Doctor: Most Grade 2 sprains take 4 to 6 weeks to heal fully. Don't rush it, or you risk re-injury. Start with gentle exercises after 2 weeks, then gradually increase activity.
+
+Patient: Okay, I'll be patient.
+
+Doctor: Good. Come back in two weeks for a follow-up.

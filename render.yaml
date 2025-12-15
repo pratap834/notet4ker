@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: physician-notetaker
+    env: python
+    runtime: python-3.11
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn app:app"
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PYTORCH_DEVICE
+        value: cpu
+      - key: MODEL_CACHE_DIR
+        value: /opt/render/project/.cache
+      - key: TRANSFORMERS_CACHE
+        value: /opt/render/project/.cache/transformers
+    disk:
+      name: models
+      mountPath: /opt/render/project/.cache
+      sizeGB: 10

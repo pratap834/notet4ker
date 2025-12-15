@@ -1,0 +1,37 @@
+{
+  "Patient_Name": "Ms. Jones",
+  "Incident": {
+    "type": "Car accident",
+    "date": "2024-09-01",
+    "location": "Cheadle Hulme to Manchester"
+  },
+  "Symptoms": [
+    "Head impact",
+    "Neck pain",
+    "Back pain",
+    "Trouble sleeping",
+    "Headache",
+    "Neck stiffness"
+  ],
+  "Diagnosis": ["Whiplash injury"],
+  "Treatment": [
+    "Visited Moss Bank A&E",
+    "Analgesics (painkillers)",
+    "10 physiotherapy sessions",
+    "Rest"
+  ],
+  "Duration": ["Initial 4 weeks severe; improving afterwards"],
+  "Current_Status": "Occasional backache; full range of motion on exam; no tenderness",
+  "Prognosis": "Full recovery expected within six months",
+  "Follow_Up_Advice": "Return if symptoms worsen or persist beyond six months; continue physiotherapy exercises at home",
+  "keywords": [
+    {"term": "whiplash injury", "score": 0.98},
+    {"term": "10 physiotherapy sessions", "score": 0.92},
+    {"term": "rear-ended at traffic light", "score": 0.89},
+    {"term": "neck pain", "score": 0.87},
+    {"term": "full recovery", "score": 0.85}
+  ],
+  "confidence": 0.91,
+  "requires_clarification": false,
+  "notes": "Patient shows good recovery trajectory with physiotherapy. All key medical information extracted with high confidence."
+}
