@@ -11,7 +11,8 @@ pip install --upgrade pip
 
 # Install Python dependencies
 echo "Installing dependencies..."
-pip install -r requirements.txt
+# Use --only-binary for packages that often fail to compile
+pip install --only-binary=blis,cymem,murmurhash,preshed,thinc -r requirements.txt
 
 # Install spaCy models (if needed)
 # python -m spacy download en_core_web_sm

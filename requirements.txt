@@ -1,5 +1,7 @@
 # Core NLP libraries
-spacy>=3.7.0
+# Pin versions that have pre-built wheels to avoid compilation
+spacy==3.7.2
+blis<0.8.0,>=0.7.0  # Ensure compatible blis version
 scispacy>=0.5.3
 transformers>=4.35.0
 torch>=2.6.0
