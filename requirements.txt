@@ -1,10 +1,14 @@
 # Core NLP libraries
 # Pin versions that have pre-built wheels to avoid compilation
 spacy==3.7.2
-blis<0.8.0,>=0.7.0  # Ensure compatible blis version
+blis==0.7.11  # Pin to specific version with pre-built wheels
+cymem==2.0.8
+murmurhash==1.0.10
+preshed==3.0.9
+thinc==8.2.2  # Compatible with spacy 3.7.2
 scispacy>=0.5.3
 transformers>=4.35.0
-torch>=2.6.0
+torch>=2.1.0,<2.5.0  # Use stable version with better wheel support
 sentence-transformers>=2.2.0
 accelerate>=0.20.0
 safetensors>=0.4.0
