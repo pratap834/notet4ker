@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  physician-notetaker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: physician-notetaker
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - PYTORCH_DEVICE=cpu
+      - MODEL_CACHE_DIR=/app/.cache
+      - TRANSFORMERS_CACHE=/app/.cache/transformers
+    volumes:
+      # Persist model cache across container restarts
+      - model_cache:/app/.cache
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8080/', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 120s
+
+volumes:
+  model_cache:
+    driver: local
